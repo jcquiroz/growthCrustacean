@@ -1,6 +1,6 @@
 ---
 title: 'Effects of growth and recruitment assumptions in the status and management
-  advice of the Chilean yellow lobster squat, *Cervimunida johni* '
+  advice of the Chilean yellow lobster squat, *Cervimunida johni*'
 author: 'Mariella Canales, Juan-Carlos Quiroz, Rodrigo Wiff, et al.'
 date: "May, 2016"
 output:
@@ -24,7 +24,7 @@ citecolor: blue
 linkcolor: blue
 urlcolor: blue
 toccolor: blue
-subtitle: ' *** '
+subtitle: ' aaaaa '
 abstract: |
   This is the abstract.
   

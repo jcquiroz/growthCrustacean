@@ -1,4 +1,4 @@
-\documentclass[11pt,letterpaper,]{article}
+\documentclass[11pt,letter,]{article}
 \usepackage[]{mathpazo}
 \usepackage{setspace}
 \setstretch{1.5}
@@ -15,6 +15,7 @@
     \usepackage{fontspec}
   \fi
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -29,6 +30,7 @@
 \hypersetup{unicode=true,
             pdftitle={Effects of growth and recruitment assumptions in the status and management advice of the Chilean yellow lobster squat, Cervimunida johni},
             pdfauthor={Mariella Canales, Juan-Carlos Quiroz, Rodrigo Wiff, et al.},
+            pdfsubject={aaaaa},
             colorlinks=true,
             linkcolor=blue,
             citecolor=blue,
@@ -48,15 +50,36 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{Effects of growth and recruitment assumptions in the status and
+management advice of the Chilean yellow lobster squat, \emph{Cervimunida
+johni}}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+\subtitle{aaaaa}
+  \author{Mariella Canales, Juan-Carlos Quiroz, Rodrigo Wiff, et al.}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{May, 2016}
+
+
 
 %\usepackage[switch*,modulo,running]{lineno}
 \usepackage[running]{lineno}
@@ -84,33 +107,15 @@
 
 \usepackage[table,xcdraw]{xcolor}
 
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
-
-%%% Change title format to be more compact
-\usepackage{titling}
-
-% Create subtitle command for use in maketitle
-\newcommand{\subtitle}[1]{
-  \posttitle{
-    \begin{center}\large#1\end{center}
-    }
-}
-
-\setlength{\droptitle}{-2em}
-  \title{Effects of growth and recruitment assumptions in the status and
-management advice of the Chilean yellow lobster squat, \emph{Cervimunida
-johni}}
-  \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-\subtitle{\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}}
-  \author{Mariella Canales, Juan-Carlos Quiroz, Rodrigo Wiff, et al.}
-  \preauthor{\centering\large\emph}
-  \postauthor{\par}
-  \predate{\centering\large\emph}
-  \postdate{\par}
-  \date{May, 2016}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
 
 \begin{document}
 \maketitle
@@ -612,6 +617,5 @@ Scenario 1 & ---          & ---        & 0.05       & 0.03       & ---         &
 \caption{Stock assessment variables for scenario with productivity h=0.75. Contained the results of nine (9) scenarios of growth, (x-axis: mean length at-age L1) low (-10\%), Base, high (+10\%). Each column correspond to scenario of VLA, low (-10\%), Base, high (+10\%). Each row correspond to a recruitment variance value. Dashed black rectangle indicates the Base Case and should be equal to h=1. TODO---include rectangle}
 \label{figure1}
 \end{figure}
-
 
 \end{document}
