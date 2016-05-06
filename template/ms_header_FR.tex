@@ -1,0 +1,26 @@
+
+%\usepackage[switch*,modulo,running]{lineno}
+\usepackage[running]{lineno}
+
+\usepackage{fancyhdr}
+% \pagestyle{fancy}
+\fancyhf{}
+% \fancyhead[LE,RO]{}
+% \fancyhead[RE,LO]{\textit{draft 0.01}}
+% \fancyfoot[RE,LO]{\leftmark}
+% \fancyfoot[LE,RO]{\thepage}
+
+\lhead[\rm\thepage]{\fancyplain{}{\sl{\itshape\nouppercase{\leftmark}}}}
+\rhead[\fancyplain{}{\sl{\itshape\nouppercase{\leftmark}}}]{\rm\thepage}
+\chead{}\lfoot{}\rfoot{\textit{draft 0.01}}\cfoot{}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+\linenumbers
+
+\setlength{\parindent}{25pt}
+\setlength{\parskip}{0em}
+
+\usepackage[table,xcdraw]{xcolor}
