@@ -24,7 +24,7 @@ citecolor: blue
 linkcolor: blue
 urlcolor: blue
 toccolor: blue
-subtitle: ' aaaaa '
+subtitle: ' ........ '
 abstract: |
   This is the abstract.
   
